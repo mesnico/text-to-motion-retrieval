@@ -33,7 +33,7 @@ This repository is intended to be a codebase - easy to expand with novel motion 
 
 * KIT ML
 
-| Text Model    | Motion Model   | r1  | r5   | r10  | mean | med | SPICE | spaCy |
+| Text Model    | Motion Model   | R@1  | R@5   | R@10  | mean | med | SPICE | spaCy |
 |---------------|----------------|-----|------|------|------|-----|-------|-------|
 | BERT+LSTM     | BiGRU          | 3.7 | 15.2 | 23.8 | 72.3 | 30  | 0.271 | 0.706 |
 | BERT+LSTM     | UpperLowerGRU  | 3.2 | 15.7 | 25.3 | 90.2 | 34  | 0.263 | 0.697 |
@@ -110,7 +110,13 @@ bash reproduce_eval.sh
 ```
 Modify che code appropriately following the models and loss functions included in `reproduce_train.sh`. Non-existing configurations will be skipped.
 
-### 5. Visualize retrieval results
+### 5. Result tables
+
+Open the `show.ipynb` notebook to produce the tables shown in the paper. 
+
+*NOTE: This is still WIP so there may be some runtime errors unless some changes are made to the code*
+
+### 6. Visualize retrieval results
 
 Run the command
 ```
