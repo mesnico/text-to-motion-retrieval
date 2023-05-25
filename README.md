@@ -8,11 +8,11 @@ This repository is intended to be a codebase - easy to expand with novel motion 
 <table>
   <tr>
     <td><i>"A person walks in a counterclockwise circle"</i></td>
-    <td><img src="teaser/example_74.gif" alt="A person walks in a counterclockwise circle" width=75%></td>
+    <td><img src="teaser/example_74.gif" alt="A person walks in a counterclockwise circle" width=100%></td>
    </tr>
    <tr>
       <td><i>"A person is kneeling down on all four legs and begins to crawl"</i></td>
-      <td><img src="teaser/example_243.gif" alt="A person is kneeling down on all four legs and begins to crawl" width=75%></td>
+      <td><img src="teaser/example_243.gif" alt="A person is kneeling down on all four legs and begins to crawl" width=100%></td>
   </tr>
 </table>
 
