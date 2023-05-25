@@ -1,0 +1,8 @@
+# @package motion_model
+
+name: BiGRU
+module:
+  _target_: models.motions.BiGRU
+  h1: 128
+  h2: 256
+  

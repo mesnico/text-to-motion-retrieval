@@ -1,0 +1,21 @@
+# @package motion_model
+
+name: DGSTGCN
+module:
+  _target_: models.motions.DGSTGCN
+  num_frames: 50
+  gcn_ratio: 0.125
+  gcn_ctr: 'T'
+  gcn_ada: 'T'
+  tcn_ms_cfg: 
+  - [3, 1]
+  - [3, 2]
+  - [3, 3]
+  - [3, 4]
+  - ['max', 3]
+  - '1x1'
+  graph_cfg:
+    mode: 'random'
+    num_filter: 8
+    init_off: .04
+    init_std: .02

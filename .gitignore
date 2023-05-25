@@ -1,0 +1,15 @@
+runs*/
+*.pkl
+*.jar
+*.log
+outputs/
+spice_tmp/
+spice_cache/
+__pycache__
+
+# data folder
+dataset/HumanML3D
+dataset/KIT-ML
+
+# thrash files and folders
+thrash/

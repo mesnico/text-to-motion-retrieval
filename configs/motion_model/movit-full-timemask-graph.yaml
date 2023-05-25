@@ -1,0 +1,17 @@
+# @package motion_model
+
+name: MoViT
+module:
+  _target_: models.motions.MoViT
+  num_frames: 60
+  embed_dims: 256
+  num_heads: 1
+  num_transformer_layers: 3
+  dropout_p: 0.1
+  tube_size: 1
+  attention_type: 'divided_space_time' #'fact_encoder'
+  use_learnable_pos_emb: False
+  body_repres: 'full'
+  use_time_padding_mask: True
+  use_skeleton_connection_mask: True
+  skeleton_walk_len: 1

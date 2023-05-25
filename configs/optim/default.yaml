@@ -1,0 +1,23 @@
+# @package optim
+
+optimizer:
+    #_target_: torch.optim.SGD
+    #lr: 0.0001
+    #nesterov: true
+    #momentum: 0.9
+    #weight_decay: 1e-6
+    _target_: torch.optim.Adam
+    lr: 0.00005
+
+lr_scheduler:
+    _target_: torch.optim.lr_scheduler.MultiStepLR
+    milestones: [100]
+    gamma: 0.1
+
+batch_size: 64
+epochs: 120
+seed: 42
+
+val_freq: 100   # iterations
+
+log_every: 10

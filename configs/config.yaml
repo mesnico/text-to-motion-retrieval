@@ -1,0 +1,27 @@
+defaults:
+  - motion_model: ???
+  - text_model: ???
+  - optim: ???
+  - data: ???
+
+gpu: 0
+resume: False
+data_rep: cont_6d_plus_rifke
+common_space_dim: 256
+final_dropout: 0.1
+
+hydra:
+  run:
+    dir: runs/${hydra.job.override_dirname}/run-${optim.seed}  # TODO: maybe using split_seed here is not the best choice... but it works
+  sweep:
+    dir: runs
+    subdir: ${hydra.job.override_dirname}/data_rep=${data_rep}/space-dim=${common_space_dim}/run-${optim.seed}
+  job:
+    config:
+      override_dirname:
+        item_sep: /
+        exclude_keys:
+          - optim.resume
+          - optim.seed
+          - common_space_dim
+          - data_rep

@@ -1,0 +1,21 @@
+# @package data
+
+train: &common
+  _target_: data_loaders.get_dataset_loader
+  name: 'kit'
+  num_frames: 32
+  split: 'train'
+  hml_mode: 'train'
+  max_violation_after: 15
+
+val:
+  split: 'val'
+  hml_mode: 'eval'
+  <<: *common # reinsert 'trainval' block content
+
+test:
+  split: 'test'
+  hml_mode: 'eval'
+  <<: *common # reinsert 'trainval' block content
+  
+

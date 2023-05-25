@@ -1,0 +1,35 @@
+# @package _global_
+
+data:
+  train: &common
+    _target_: data_loaders.get_dataset_loader
+    name: 'humanml'
+    num_frames: null
+    split: 'train'
+    hml_mode: 'train'
+    max_violation_after: 4
+
+  val:
+    split: 'val'
+    hml_mode: 'eval'
+    <<: *common # reinsert 'trainval' block content
+
+  test:
+    split: 'test'
+    hml_mode: 'eval'
+    <<: *common # reinsert 'trainval' block content
+  
+optim:
+  lr_scheduler:
+    _target_: torch.optim.lr_scheduler.MultiStepLR
+    milestones: [20]
+    gamma: 0.1
+
+  epochs: 30
+
+  val_freq: 450   # iterations
+
+  loss:
+    lambda_start_epoch: 7
+    lambda_end_epoch: 13
+

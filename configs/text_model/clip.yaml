@@ -1,0 +1,5 @@
+# @package text_model
+
+name: CLIP
+module:
+  _target_: models.texts.CLIP

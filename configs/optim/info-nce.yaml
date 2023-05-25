@@ -1,0 +1,7 @@
+# @package optim
+
+defaults:
+  - default
+
+loss:
+  _target_: models.losses.InfoNCELoss

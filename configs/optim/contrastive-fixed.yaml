@@ -1,0 +1,9 @@
+# @package optim
+
+defaults:
+  - default
+
+loss:
+  _target_: models.losses.ContrastiveFixed
+  margin: 0.2
+  max_violation_after: ${data.train.max_violation_after}
