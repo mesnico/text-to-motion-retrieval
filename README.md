@@ -1,7 +1,9 @@
 # Text to Motion Retrieval
 
 ## Overview
-This is the official code for reproducing results obtained in the short paper "Text-to-Motion Retrieval: Towards Joint Understanding of Human Motion Data and Natural Language", accepted as a short paper at SIGIR 2023.
+This is the official code for reproducing results obtained in the short paper [Text-to-Motion Retrieval: Towards Joint Understanding of Human Motion Data and Natural Language](https://dl.acm.org/doi/abs/10.1145/3539618.3592069).
+
+:fire: This paper won the [Best Short Paper Award Honorable Mention](https://sigir.org/sigir2023/program/best-paper-award/) at [SIGIR 2023](https://sigir.org/sigir2023/).
 
 This repository is intended to be a codebase - easy to expand with novel motion encoders, text encoders, and loss functions - to develop novel approaches for text-to-motion (and motion-to-text) retrieval.
 
